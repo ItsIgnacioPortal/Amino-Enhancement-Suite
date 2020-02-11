@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Amino Enhancement Suite",
+  "version": "1.0.0",
+
+  "description": "An Enhancement suite for the AminoApps website",
+
+  "content_scripts": [
+    {
+      "matches": ["*://aminoapps.com/*"],
+      "js": ["addon.js"]
+    }
+  ]
+
+}
