@@ -33,13 +33,15 @@ async function main () {
 
     } catch(e) {
         
+        console.error("[AHS]: ERROR: ");
         console.log(e);
     }
     try {
         //Live comments are deleted separetly because they are not always on the page...
         liveComments[0].parentNode.removeChild(liveComments[0]);
     } catch(e) {
-        // statements
+    	
+        console.error("[AHS]: ERROR: ");
         console.log(e);
     }
     
