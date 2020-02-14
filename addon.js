@@ -1,4 +1,6 @@
-/*jslint devel: true */
+//  All console warnings start with "[AHS]: " to diferentiate this addons warnings from any other.
+//  AHS = Amino Enhancement Suite
+
 console.info("AHS Loaded.");
 main();
 
@@ -11,8 +13,6 @@ async function main(){
 	var communityListBlur = await document.getElementsByClassName("global-chat-community-bg");
 	var liveComments = await document.getElementsByClassName("live-comment")[0].getElementsByClassName("content init");
 	var liveMembers = await document.getElementsByClassName("live-member-list active");
-
-	await console.info("[AHS]: Modifying page...");
 
 	//if the banner was collected succesfully...
 	if(banner[0].lenght !== 0){

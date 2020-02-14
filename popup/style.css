@@ -1,0 +1,21 @@
+html, body {
+	width: 100px;
+}
+
+p{
+	font-family: sans-serif;
+	font-size: 10px;
+	color: black;
+}
+
+img{
+	float: left;
+	margin-right: 0.2%;
+}
+
+.banner p{
+	font-size: 1%;
+	font-family: sans-serif;
+	color: #010c43;
+}
+
