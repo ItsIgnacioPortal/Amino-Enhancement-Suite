@@ -1,9 +1,15 @@
 html, body {
 	max-width: 800px;
 	max-height: 600px;
-	width: 528px;
-	height: 288px;
+	min-width: 96px;
+	width: calc(800px * 0.66);
+	height: calc(600px * 0.48);
 	background-color: #e0e0d1;
+	overflow: hidden;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 p{
@@ -36,17 +42,85 @@ p{
 	padding-top: 4.5%;
 }
 
-.menu form{
+.menu{
+	height: 100%;
+	background-color: #666666;
+}
 
+.menu form{
+	padding-bottom: 7%;
 	padding-top: 2%;
 	padding-left: 2%;
-	padding-bottom: 17%;
-	background-color: #666666;
+}
+
+.menu .option{
+	padding-top: 0.1%;
+	padding-bottom: 0.2%;
 }
 
 .menu label{
 	font-family: sans-serif;
 	font-size: 100%;
-	color: #000519
+	color: #000099;
+	font-weight: bold;
+}
+
+
+.menu .buttons{
+	padding-top: 1%;
+	padding-bottom: 2%;
+	padding-left: 1%;
+}
+
+.menu .buttons .button{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+
+#greenRoundedButton {
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:3px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: sans-serif;
+	font-size:80%;
+	font-weight:bold;
+	padding:8px 19px;
+	text-decoration:none;
+}
+#greenRoundedButton:hover {
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+}
+#greenRoundedButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+#githubButton {
+	background-color: #020501;
+	border-radius: 3px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 80%;
+	font-weight: bold;
+	padding-top: 1.55%;
+	padding-bottom: 1.55%;
+	padding-left: 7%;
+	padding-right: 3%;
+	text-decoration:none;
+}
+#githubButton:hover {
+	background-color: #72b352;
+}
+#githubButton:active {
+	position: relative;
+	top: 1px;
 }
 
