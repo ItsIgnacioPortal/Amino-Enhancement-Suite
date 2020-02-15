@@ -70,11 +70,10 @@ p{
 	padding-top: 1%;
 	padding-bottom: 2%;
 	padding-left: 1%;
-}
 
-.menu .buttons .button{
-	margin-left: 10px;
-	margin-right: ;
+	display: grid;
+	grid-template-columns: 131px 119px 94px;
+	grid-gap: 20px;
 }
 
 
@@ -89,6 +88,8 @@ p{
 	font-weight:bold;
 	padding:8px 19px;
 	text-decoration:none;
+	width: 93px;
+	height: 16px;
 }
 #greenRoundedButton:hover {
 	background-color:#639e47;
@@ -101,22 +102,21 @@ p{
 
 
 #githubButtonWrapper{
-	padding-left: 160px;
-	margin-top: -32px;
 	height: 32px;
+	padding-left: 10px;
 }
 
 #githubButtonWrapper img{
 	width: 21px;
     padding-top: 4px;
-    margin-right: -40px;
     z-index: 2;
     position: relative;
     height: auto;
+    margin-right: -30px;
 }
 
 #githubButtonWrapper:active {
-	margin-top: -31px;
+	margin-top: 1px;
 }
 
 #githubButton {
@@ -143,22 +143,21 @@ p{
 
 
 #paypalButtonWrapper{
-	padding-left: 289px;
-	margin-top: -32px;
 	height: 32px;
+	padding-left: 10px;
 }
 
 #paypalButtonWrapper img{
 	width: 21px;
     padding-top: 4px;
-    margin-right: -40px;
     z-index: 2;
     position: relative;
     height: auto;
+    margin-right: -30px;
 }
 
 #paypalButtonWrapper:active {
-	margin-top: -31px;
+	margin-top: 1px;
 }
 
 #paypalButton:hover {
