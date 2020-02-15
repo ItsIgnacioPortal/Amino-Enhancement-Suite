@@ -73,13 +73,12 @@ p{
 }
 
 .menu .buttons .button{
-	margin-left: 2%;
-	margin-right: 2%;
+	margin-left: 10px;
+	margin-right: ;
 }
 
 
 #greenRoundedButton {
-	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
 	background-color:#77b55a;
 	border-radius:3px;
 	display:inline-block;
@@ -92,35 +91,93 @@ p{
 	text-decoration:none;
 }
 #greenRoundedButton:hover {
-	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
-	background-color:#72b352;
+	background-color:#639e47;
 }
 #greenRoundedButton:active {
-	position:relative;
-	top:1px;
-}
-
-
-#githubButton {
-	background-color: #020501;
-	border-radius: 3px;
-	display: inline-block;
-	cursor: pointer;
-	color: #ffffff;
-	font-family: Arial;
-	font-size: 80%;
-	font-weight: bold;
-	padding-top: 1.55%;
-	padding-bottom: 1.55%;
-	padding-left: 7%;
-	padding-right: 3%;
-	text-decoration:none;
-}
-#githubButton:hover {
-	background-color: #72b352;
-}
-#githubButton:active {
 	position: relative;
 	top: 1px;
 }
 
+
+
+#githubButtonWrapper{
+	padding-left: 160px;
+	margin-top: -32px;
+	height: 32px;
+}
+
+#githubButtonWrapper img{
+	width: 21px;
+    padding-top: 4px;
+    margin-right: -40px;
+    z-index: 2;
+    position: relative;
+    height: auto;
+}
+
+#githubButtonWrapper:active {
+	margin-top: -31px;
+}
+
+#githubButton {
+	background-color: #000000;
+	border-radius: 3px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: sans-serif;
+	font-size: 80%;
+	font-weight: bold;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 35px;
+	padding-right: 15px;
+	text-decoration: none;
+	position: absolute;
+}
+#githubButton:hover {
+	background-color: #1a1a1a;
+}
+
+
+
+
+#paypalButtonWrapper{
+	padding-left: 289px;
+	margin-top: -32px;
+	height: 32px;
+}
+
+#paypalButtonWrapper img{
+	width: 21px;
+    padding-top: 4px;
+    margin-right: -40px;
+    z-index: 2;
+    position: relative;
+    height: auto;
+}
+
+#paypalButtonWrapper:active {
+	margin-top: -31px;
+}
+
+#paypalButton:hover {
+	background-color: #ffba1a;
+}
+
+#paypalButton {
+	background-color: #FFC339;
+	border-radius: 3px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: sans-serif;
+	font-size: 80%;
+	font-weight: bold;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 35px;
+	padding-right: 15px;
+	text-decoration: none;
+	position: absolute;
+}
