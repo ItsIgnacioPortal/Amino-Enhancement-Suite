@@ -13,6 +13,8 @@ async function main(){
 	var communityListBlur = await document.getElementsByClassName("global-chat-community-bg");
 	var liveComments = await document.getElementsByClassName("live-comment")[0].getElementsByClassName("content init");
 	var liveMembers = await document.getElementsByClassName("live-member-list active");
+	var communityList = await document.getElementsByClassName("aminos-list list-all-items-loaded");
+	var communityListContainer = await document.getElementsByClassName("global-chat-community-container")
 
 	//if the banner was collected succesfully...
 	if(banner[0].lenght !== 0){
@@ -31,6 +33,19 @@ async function main(){
 			navButtons[0].style.paddingRight = "0px";
 			navButtons[0].style.marginLeft = "-14.275%";
 			navButtons[0].style.paddingTop = "0px";
+
+			//Customize the CommunityList
+			communityList[0].style.display = "grid";
+			communityList[0].style.gridTemplateRows = "50px 50px 50px";
+			communityList[0].style.gridTemplateColumns = "50px 50px 50px 50px";
+			communityList[0].style.gridGap = "20px";
+			communityList[0].style.background = "aqua";
+			communityList[0].style.overflow =  "hidden";
+
+			communityList[0].style.
+			//Make this container bigger...
+			communityListContainer[0].style.width = "";
+
 
 		} catch(e) {
 			
