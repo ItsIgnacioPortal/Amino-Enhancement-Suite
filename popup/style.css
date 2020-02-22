@@ -1,0 +1,182 @@
+html, body {
+	max-width: 800px;
+	max-height: 600px;
+	min-width: 96px;
+	width: calc(800px * 0.66);
+	height: calc(600px * 0.48);
+	background-color: #e0e0d1;
+	overflow: hidden;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+p{
+	font-family: sans-serif;
+	font-size: 75%;
+	color: black;
+}
+
+.banner {
+	background-color: #808080;
+	height: 41%;
+	width: 100%; 
+}
+
+.banner img{
+	float: left;
+	padding-right: 2%;
+	padding-left: 2%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.banner h1{
+	float: right;
+	font-size: 160%;
+	font-family: sans-serif;
+	color: #010c43;
+	word-wrap: break-word;
+	padding-right: 5%;
+	padding-top: 4.5%;
+}
+
+.menu{
+	height: 100%;
+	background-color: #666666;
+}
+
+.menu form{
+	padding-bottom: 7%;
+	padding-top: 2%;
+	padding-left: 2%;
+}
+
+.menu .option{
+	padding-top: 0.1%;
+	padding-bottom: 0.2%;
+}
+
+.menu label{
+	font-family: sans-serif;
+	font-size: 100%;
+	color: #000000;
+	font-weight: bold;
+}
+
+
+.menu .buttons{
+	padding-top: 5px
+	padding-bottom: 10px;
+	padding-left: 20px;
+
+	display: grid;
+	grid-template-columns: 131px 119px 94px;
+	grid-gap: 20px;
+}
+
+
+#greenRoundedButton {
+	background-color:#77b55a;
+	border-radius:3px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: sans-serif;
+	font-size:80%;
+	font-weight:bold;
+	padding:8px 19px;
+	text-decoration:none;
+	width: 93px;
+	height: 16px;
+}
+#greenRoundedButton:hover {
+	background-color:#639e47;
+}
+#greenRoundedButton:active {
+	position: relative;
+	top: 1px;
+}
+
+
+
+#githubButtonWrapper{
+	height: 32px;
+	padding-left: 10px;
+}
+
+#githubButtonWrapper img{
+	width: 21px;
+    padding-top: 4px;
+    z-index: 2;
+    position: relative;
+    height: auto;
+    margin-right: -30px;
+}
+
+#githubButtonWrapper:active {
+	margin-top: 1px;
+}
+
+#githubButton {
+	background-color: #000000;
+	border-radius: 3px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: sans-serif;
+	font-size: 80%;
+	font-weight: bold;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 35px;
+	padding-right: 15px;
+	text-decoration: none;
+	position: absolute;
+}
+#githubButton:hover {
+	background-color: #1a1a1a;
+}
+
+
+
+
+#paypalButtonWrapper{
+	height: 32px;
+	padding-left: 10px;
+}
+
+#paypalButtonWrapper img{
+	width: 21px;
+    padding-top: 4px;
+    z-index: 2;
+    position: relative;
+    height: auto;
+    margin-right: -30px;
+}
+
+#paypalButtonWrapper:active {
+	margin-top: 1px;
+}
+
+#paypalButton:hover {
+	background-color: #ffba1a;
+}
+
+#paypalButton {
+	background-color: #FFC339;
+	border-radius: 3px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: sans-serif;
+	font-size: 80%;
+	font-weight: bold;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 35px;
+	padding-right: 15px;
+	text-decoration: none;
+	position: absolute;
+}

@@ -1,0 +1,46 @@
+<!--
+NOTE: You have to go to:
+ about:config -> ui.popup.disable_autohide
+ to Debug this popup (in firefox)
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<script src="checkBoxes.js"></script>
+	<div class="banner">
+		<img src="../icons/icon-96.png" alt="AHS Icon"/>
+		<h1>AMINO ENHANCEMENT SUITE</h1>
+	</div>
+	<div class="menu">
+		<form>
+			<div class="option">
+				<input type="checkbox" id="sBanner" onClick="validateCheckboxes();">
+				<label>Show banner</label><br>
+			</div>
+			<div class="option">
+				<input type="checkbox" id="sCommunityListFog" onClick="validateCheckboxes();">
+				<label >Show community list fog</label><br>	
+			</div>
+			<div class="option">
+				<input type="checkbox" id="sLiveComments" onClick="validateCheckboxes();">
+				<label >Show animated comments</label><br>
+			</div>
+		</form>
+		<div class="buttons">
+			<a href="#" id="greenRoundedButton" class="button">Apply changes</a>
+			<div id="githubButtonWrapper" href="https://github.com/PinkDev1/Amino-Enhancement-Suite">
+				<img src="img/github.png" alt="Github Icon">
+				<a id="githubButton" class="button">View Code</a>
+			</div>
+			<div id="paypalButtonWrapper" href="#">
+				<img src="img/paypal.png" alt="Paypal Icon">
+				<a id="paypalButton" class="button">Paypal</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
