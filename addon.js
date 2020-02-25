@@ -2,9 +2,8 @@
 //  AHS = Amino Enhancement Suite
 
 console.info("AHS Loaded.");
-main();
 
-async function main(){
+(async function(){
 
 	//Find the annoying html elements and store them in their respective arrays
 	var banner = await document.getElementsByClassName("content community-bg");
@@ -57,4 +56,4 @@ async function main(){
 
 		}
 	};
-}
+})();

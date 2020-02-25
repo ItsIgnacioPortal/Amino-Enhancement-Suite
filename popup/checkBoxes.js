@@ -1,6 +1,9 @@
 window.onload = async function createListeners(){
 
 	try{
+		//Load toggleResources.js
+		await browser.tabs.executeScript({file: "../content scripts/toggleResources.js"});
+
 		//Get the checkboxes
 		var bannerCheckbox = await document.getElementById("sBanner");
 		var communityListBlurCheckbox = await document.getElementById("sCommunityListFog");
@@ -29,9 +32,17 @@ async function validateBanner() {
 		//Switch state accordingly
 		if(bannerCheckbox.checked){
 			console.log("Showing banner...");
+			browser.tabs.sendMessage(
+				tabs[0].id,
+				{command: "enableBanner"});
 
 		} else {
 			console.log("Hiding banner...");
+			console.log("Showing banner...");
+			browser.tabs.sendMessage(
+				tabs[0].id,
+				{command: "disableBanner"});
+
 		}
 
 	//Report Errors

@@ -2,7 +2,10 @@ Q: How does this addon even work??
 
 A: First, as soon as a blog is opened on aminoapps.com, addon.js hides/modifies all of the annoying elements[1]
 Then, when the extension's icon is clicked, menu.html pops up and runs checkBoxes.js
-checkBoxes.js Creates event listeners for the checkboxes in menu.html; Each individual checkbox has it's inidivual function to check it's state and modify aminoapps.com html accordingly to what the user wants.
+
+checkBoxes.js loads "toggleResources.js" on the aminoapps page and then creates event listeners for the checkboxes in menu.html; Each individual checkbox has it's inidivual function to check it's state and modify aminoapps.com html accordingly to what the user wants.
+When an event is triggered, the checkbox is evaluated and a message is sent to toggleResources.js with "browser.tabs.sendMessage".
+Then toggleResources.js modifies the "display" css propierty of the according element.
 
 
 [1]: The annoying elements are: The Banner, Navigation Buttons, Overflow button of the Navigation Buttons, Community list Blur, Live Comments.
