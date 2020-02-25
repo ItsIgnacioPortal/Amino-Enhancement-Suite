@@ -1,9 +1,6 @@
 window.onload = async function createListeners(){
 
 	try{
-		//Load toggleResources.js
-		await browser.tabs.executeScript({file: "../content scripts/toggleResources.js"});
-
 		//Get the checkboxes
 		var bannerCheckbox = await document.getElementById("sBanner");
 		var communityListBlurCheckbox = await document.getElementById("sCommunityListFog");

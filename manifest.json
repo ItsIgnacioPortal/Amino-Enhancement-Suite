@@ -27,7 +27,7 @@
   "content_scripts": [
     {
       "matches": ["*://aminoapps.com/*"],
-      "js": ["addon.js"]
+      "js": ["content_scripts/addon.js"]
     }
   ],
 
