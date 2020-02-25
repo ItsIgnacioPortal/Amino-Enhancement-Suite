@@ -54,14 +54,6 @@
 				console.log("If you're reading this something went very wrong...");
 				break;
 		}
-
-		/*
-		if (message.command === "beastify") {
-			insertBeast(message.beastURL);
-		} else if (message.command === "reset") {
-			removeExistingBeasts();
-		}
-		*/
 	});
 
 })();
