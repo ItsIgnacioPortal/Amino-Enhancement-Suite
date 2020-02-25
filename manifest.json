@@ -12,7 +12,8 @@
 
   "web_accessible_resources": [
     "popup/checkBoxes.js",
-    "popup/style.css"
+    "popup/style.css",
+    "popup/menu.html"
   ],
 
   "browser_action": {
@@ -20,6 +21,8 @@
     "default_title": "Amino Enhancement Suite",
     "default_popup": "popup/menu.html"
   },
+
+  "content_security_policy": "script-src 'self'; object-src 'none'",
 
   "content_scripts": [
     {
