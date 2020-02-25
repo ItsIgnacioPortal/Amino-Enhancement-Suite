@@ -29,6 +29,10 @@
       "matches": ["*://aminoapps.com/*"],
       "js": ["addon.js"]
     }
+  ],
+
+  "permissions": [
+    "*://aminoapps.com/c/*"
   ]
 
 }

@@ -17,10 +17,10 @@ async function main(){
 	//if the banner was collected succesfully...
 	if(banner[0].lenght !== 0){
 		try {
-			//Delete unwanted elements...
-			banner[0].parentNode.removeChild(banner[0]);
-			communityListBlur[0].parentNode.removeChild(communityListBlur[0]);
-			navButtonsOverflow[0].parentNode.removeChild(navButtonsOverflow[0]);
+			//Hide unwanted elements...
+			banner[0].style.display = "none";
+			communityListBlur[0].style.display = "none";
+			navButtonsOverflow[0].style.display = "none";
 
 			//Customize the NavButtons
 			navButtons[0].style.marginTop = "-2.5%";
@@ -45,7 +45,7 @@ async function main(){
 	window.onload = async function() {
 		try {
 			//Hide the liveComments
-			liveComments[0].style.position = "initial";
+			liveComments[0].style.display = "none";
 
 			//Customize the liveMembers position
 			liveMembers[0].style.position = "fixed";
