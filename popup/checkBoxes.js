@@ -27,30 +27,11 @@ async function validateBanner() {
 
 		//Switch state accordingly
 		if(bannerCheckbox.checked){
-			console.log("Showing banner...");
-
-			try {
-				browser.tabs.query({
-					currentWindow: true,
-					active: true
-				}).then(sendMessageToTabs);
-				function sendMessageToTabs(tabs){
-					for (let tab of tabs) {
-						browser.tabs.sendMessage(
-							tab.id,
-							{command: "Hello"}
-						 )
-					};
-				}
-
-			} catch(e) {
-				console.error("[AHS]: ERROR: ");
-				console.log(e);
-			}
-
+			//Show banner
+			sendMessage("enableBanner");
 		} else {
-			console.log("Hiding banner...");
-
+			//Hide banner
+			sendMessage("disableBanner");
 		}
 
 	//Report Errors
@@ -70,9 +51,11 @@ async function validateCommunityListBlur(){
 
 		//Switch state accordingly
 		if(communityListBlurCheckbox.checked){
-			console.log("Showing community list blur...");
+			//Show community list blur
+			sendMessage("enableCLB");
 		} else {
-			console.log("Hiding community list blur...");
+			//Hide community list blur
+			sendMessage("disableCLB");
 		}
 
 	//Report Errors
@@ -91,9 +74,11 @@ async function validateLiveComments(){
 
 		//Switch state accordingly
 		if(liveCommentsCheckbox.checked){
-			console.log("Showing live comments...");
+			//Show live comments
+			sendMessage("enableLiveComments");
 		} else {
-			console.log("Hiding live comments...");
+			//Hide live comments
+			sendMessage("disableLiveComments");
 		}
 
 	//Report Errors
@@ -102,4 +87,20 @@ async function validateLiveComments(){
 		console.log(e);
 
 	}
+}
+
+
+
+function sendMessage(message){
+	browser.tabs.query({
+		currentWindow: true,
+		active: true
+	}).then(function (tabs){
+		for (let tab of tabs) {
+			browser.tabs.sendMessage(
+				tab.id,
+				{command: message}
+			);
+		}
+	});
 }

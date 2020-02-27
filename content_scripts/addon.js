@@ -1,8 +1,5 @@
 //  All console warnings start with "[AHS]: " to diferentiate this addons warnings from any other.
 //  AHS = Amino Enhancement Suite
-
-console.info("AHS Loaded.");
-
 (async function(){
 
 	//Find the annoying html elements and store them in their respective arrays
@@ -56,11 +53,10 @@ console.info("AHS Loaded.");
 
 		}
 		
-		/*
+		
 		//Listen for messages from the background script.
 		browser.runtime.onMessage.addListener((message) => {
 
-			console.log("Message recieved...");
 			switch(message.command){
 
 				case "enableBanner":
@@ -87,27 +83,6 @@ console.info("AHS Loaded.");
 
 				case "disableLiveComments":
 					liveComments[0].style.display = "none";
-					break;
-
-				default:
-					console.log("If you're reading this something went very wrong...");
-					break;
-			}
-		});
-		*/
-
-		//TEST listen for messages
-		browser.runtime.onMessage.addListener((message) => {
-
-			console.log("Message recieved...");
-			switch(message.command){
-
-				case "Hello":
-					console.log("HELLO!!")
-					break;
-
-				case "Bye":
-					console.log("Bye...");
 					break;
 
 				default:
