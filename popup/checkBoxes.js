@@ -1,14 +1,31 @@
+//Retrieve values from storage
+var AHSStorage = {};
+
 window.onload = async function createListeners(){
 
 	try{
 		//Get the checkboxes
 		var bannerCheckbox = await document.getElementById("sBanner");
-		var communityListBlurCheckbox = await document.getElementById("sCommunityListFog");
+		var CLBCheckbox = await document.getElementById("sCommunityListFog");
 		var liveCommentsCheckbox = await document.getElementById("sLiveComments");
+		
+		//DEBUGGING: browser.storage.local.get().then(function(item){console.log(item);});
+		await browser.storage.local.get().then(function(item){AHSStorage = item;});
+		if(AHSStorage.bannerCheckboxChecked){
+			bannerCheckbox.checked = true;
+		}  //else it will just remain unchecked
+
+		if(AHSStorage.CLBCheckboxChecked){
+			CLBCheckbox.checked = true;
+		}  //else it will just remain unchecked
+
+		if(AHSStorage.liveCommentsCheckboxChecked){
+			liveCommentsCheckbox.checked = true;
+		}  //else it will just remain unchecked
 
 		//Add eventlisteners to validateCheckboxes
 		bannerCheckbox.addEventListener("click", validateBanner);
-		communityListBlurCheckbox.addEventListener("click", validateCommunityListBlur);
+		CLBCheckbox.addEventListener("click", validateCommunityListBlur);
 		liveCommentsCheckbox.addEventListener("click", validateLiveComments);
 
 	} catch(e){
@@ -16,7 +33,7 @@ window.onload = async function createListeners(){
 		console.error("[AHS]: ERROR: ");
 		console.log(e);
 	}
-}
+};
 
 
 //Func. to get a checkbox state and modify the page accordingly
@@ -29,9 +46,11 @@ async function validateBanner() {
 		if(bannerCheckbox.checked){
 			//Show banner
 			sendMessage("enableBanner");
+			browser.storage.local.set({bannerCheckboxChecked: true});
 		} else {
 			//Hide banner
 			sendMessage("disableBanner");
+			browser.storage.local.set({bannerCheckboxChecked: false});
 		}
 
 	//Report Errors
@@ -47,15 +66,17 @@ async function validateBanner() {
 async function validateCommunityListBlur(){
 	try{
 		//Get the checkbox
-		var communityListBlurCheckbox = await document.getElementById("sCommunityListFog");
+		var CLBCheckbox = await document.getElementById("sCommunityListFog");
 
 		//Switch state accordingly
-		if(communityListBlurCheckbox.checked){
+		if(CLBCheckbox.checked){
 			//Show community list blur
 			sendMessage("enableCLB");
+			browser.storage.local.set({CLBCheckboxChecked: true});
 		} else {
 			//Hide community list blur
 			sendMessage("disableCLB");
+			browser.storage.local.set({CLBCheckboxChecked: false});
 		}
 
 	//Report Errors
@@ -76,9 +97,11 @@ async function validateLiveComments(){
 		if(liveCommentsCheckbox.checked){
 			//Show live comments
 			sendMessage("enableLiveComments");
+			browser.storage.local.set({liveCommentsCheckboxChecked: true});
 		} else {
 			//Hide live comments
 			sendMessage("disableLiveComments");
+			browser.storage.local.set({liveCommentsCheckboxChecked: false});
 		}
 
 	//Report Errors
@@ -90,7 +113,11 @@ async function validateLiveComments(){
 }
 
 
-
+/*
+* A function to send messages to addon.js with the 
+*  tabs.sendMessage() API &
+*  tabs.query() API
+*/
 function sendMessage(message){
 	browser.tabs.query({
 		currentWindow: true,

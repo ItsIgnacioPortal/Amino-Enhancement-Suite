@@ -1,5 +1,8 @@
 //  All console warnings start with "[AHS]: " to diferentiate this addons warnings from any other.
 //  AHS = Amino Enhancement Suite
+
+console.log("AHS LOADED...");
+
 (async function(){
 
 	//Find the annoying html elements and store them in their respective arrays
@@ -36,7 +39,6 @@
 	}
 	
 	//Live comments are edited separetly because they are not always on the page...
-
 	//When the page loads...
 	window.onload = async function() {
 		try {
@@ -92,3 +94,17 @@
 		});
 	};
 })();
+
+
+//Before the page closes / is reloaded
+window.onbeforeunload = async function(){
+	//Reset the checkboxes values on storage
+	await browser.storage.local.set({
+		bannerCheckboxChecked: false,
+		CLBCheckboxChecked: false,
+		liveCommentsCheckboxChecked: false
+	});
+
+	//Dont popup anything to the user
+	return null;
+};

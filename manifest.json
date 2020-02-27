@@ -32,7 +32,8 @@
   ],
 
   "permissions": [
-    "*://aminoapps.com/c/*"
+    "*://aminoapps.com/c/*",
+    "storage"
   ]
 
 }
