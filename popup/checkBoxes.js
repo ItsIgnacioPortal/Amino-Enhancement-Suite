@@ -16,7 +16,6 @@ window.onload = async function createListeners(){
 		console.error("[AHS]: ERROR: ");
 		console.log(e);
 	}
-
 }
 
 
@@ -29,16 +28,28 @@ async function validateBanner() {
 		//Switch state accordingly
 		if(bannerCheckbox.checked){
 			console.log("Showing banner...");
-			browser.tabs.sendMessage(
-				tabs[0].id,
-				{command: "enableBanner"});
+
+			try {
+				browser.tabs.query({
+					currentWindow: true,
+					active: true
+				}).then(sendMessageToTabs);
+				function sendMessageToTabs(tabs){
+					for (let tab of tabs) {
+						browser.tabs.sendMessage(
+							tab.id,
+							{command: "Hello"}
+						 )
+					};
+				}
+
+			} catch(e) {
+				console.error("[AHS]: ERROR: ");
+				console.log(e);
+			}
 
 		} else {
 			console.log("Hiding banner...");
-			console.log("Showing banner...");
-			browser.tabs.sendMessage(
-				tabs[0].id,
-				{command: "disableBanner"});
 
 		}
 

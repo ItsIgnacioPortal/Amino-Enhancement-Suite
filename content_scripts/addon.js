@@ -56,7 +56,7 @@ console.info("AHS Loaded.");
 
 		}
 		
-	
+		/*
 		//Listen for messages from the background script.
 		browser.runtime.onMessage.addListener((message) => {
 
@@ -87,6 +87,27 @@ console.info("AHS Loaded.");
 
 				case "disableLiveComments":
 					liveComments[0].style.display = "none";
+					break;
+
+				default:
+					console.log("If you're reading this something went very wrong...");
+					break;
+			}
+		});
+		*/
+
+		//TEST listen for messages
+		browser.runtime.onMessage.addListener((message) => {
+
+			console.log("Message recieved...");
+			switch(message.command){
+
+				case "Hello":
+					console.log("HELLO!!")
+					break;
+
+				case "Bye":
+					console.log("Bye...");
 					break;
 
 				default:
