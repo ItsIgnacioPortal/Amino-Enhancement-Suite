@@ -13,12 +13,28 @@ console.log("AHS LOADED...");
 	var liveComments = await document.getElementsByClassName("live-comment")[0].getElementsByClassName("content init");
 	var liveMembers = await document.getElementsByClassName("live-member-list active");
 
+	//Create the AHSStorage object
+	var AHSStorage = {};
+	//Save all of our storage on the AHSStorage object
+	await browser.storage.local.get().then(function(item){AHSStorage = item;});
+
 	//if the banner was collected succesfully...
 	if(banner[0].lenght !== 0){
 		try {
-			//Hide unwanted elements...
-			banner[0].style.display = "none";
-			communityListBlur[0].style.display = "none";
+
+			//If "Show banner" was not selected...
+			if(AHSStorage.bannerCheckboxChecked != true){
+				//Hide the banner
+				banner[0].style.display = "none";
+			}  //else don't
+
+			//If "Show community list blur" was not selected...
+			if(AHSStorage.CLBCheckboxChecked != true){
+				//Hide the community list blur
+				communityListBlur[0].style.display = "none";
+			}
+			
+			
 			navButtonsOverflow[0].style.display = "none";
 
 			//Customize the NavButtons
@@ -42,8 +58,13 @@ console.log("AHS LOADED...");
 	//When the page loads...
 	window.onload = async function() {
 		try {
-			//Hide the liveComments
-			liveComments[0].style.display = "none";
+
+			//If "Show live comments" was not selected...
+			if(AHSStorage.liveCommentsCheckboxChecked != true){
+				//Hide the liveComments
+				liveComments[0].style.display = "none";
+			}  //else don't
+
 
 			//Customize the liveMembers position
 			liveMembers[0].style.position = "fixed";
@@ -94,17 +115,3 @@ console.log("AHS LOADED...");
 		});
 	};
 })();
-
-
-//Before the page closes / is reloaded
-window.onbeforeunload = async function(){
-	//Reset the checkboxes values on storage
-	await browser.storage.local.set({
-		bannerCheckboxChecked: false,
-		CLBCheckboxChecked: false,
-		liveCommentsCheckboxChecked: false
-	});
-
-	//Dont popup anything to the user
-	return null;
-};
