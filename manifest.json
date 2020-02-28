@@ -12,7 +12,8 @@
 
   "web_accessible_resources": [
     "popup/checkBoxes.js",
-    "popup/style.css"
+    "popup/style.css",
+    "popup/menu.html"
   ],
 
   "browser_action": {
@@ -21,11 +22,18 @@
     "default_popup": "popup/menu.html"
   },
 
+  "content_security_policy": "script-src 'self'; object-src 'none'",
+
   "content_scripts": [
     {
       "matches": ["*://aminoapps.com/*"],
-      "js": ["addon.js"]
+      "js": ["content_scripts/addon.js"]
     }
+  ],
+
+  "permissions": [
+    "*://aminoapps.com/c/*",
+    "storage"
   ]
 
 }

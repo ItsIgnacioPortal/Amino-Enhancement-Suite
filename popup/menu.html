@@ -1,16 +1,11 @@
-<!--
-NOTE: You have to go to:
- about:config -> ui.popup.disable_autohide
- to Debug this popup (in firefox)
--->
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
+	<script type="text/javascript" src="checkBoxes.js"></script>
 	<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-	<script src="checkBoxes.js"></script>
 	<div class="banner">
 		<img src="../icons/icon-96.png" alt="AHS Icon"/>
 		<h1>AMINO ENHANCEMENT SUITE</h1>
@@ -18,15 +13,15 @@ NOTE: You have to go to:
 	<div class="menu">
 		<form>
 			<div class="option">
-				<input type="checkbox" id="sBanner" onClick="validateCheckboxes();">
+				<input type="checkbox" id="sBanner">
 				<label>Show banner</label><br>
 			</div>
 			<div class="option">
-				<input type="checkbox" id="sCommunityListFog" onClick="validateCheckboxes();">
+				<input type="checkbox" id="sCommunityListFog">
 				<label >Show community list fog</label><br>	
 			</div>
 			<div class="option">
-				<input type="checkbox" id="sLiveComments" onClick="validateCheckboxes();">
+				<input type="checkbox" id="sLiveComments">
 				<label >Show animated comments</label><br>
 			</div>
 		</form>

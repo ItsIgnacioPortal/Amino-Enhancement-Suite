@@ -1,0 +1,18 @@
+Q: How does this addon even work??
+
+A: Check out FLOW-CHART_DRAWIO.drawio
+
+==============================================================================================
+menu.html
+
+Q: How to debug this?
+A: (FIREFOX) You have to go to "about:config" and then toggle "ui.popup.disable_autohide"
+
+==============================================================================================
+checkBoxes.js
+
+Q: Instead of having some complicate communication beetwen addon.js <-> checkBoxes.js, why not use "browser.tabs.insertCSS" to just DISPLAY the elements accordingly?
+A: Becouse addon.js hides the element by putting the CSS value ON the html itself, wich makes it override whathever is on the pages imported CSS
+Q: Then why not use "browser.tabs.insertCSS" on addon.js as well?
+A: Becouse we can't: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
+
