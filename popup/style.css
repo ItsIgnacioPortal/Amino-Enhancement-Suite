@@ -72,33 +72,9 @@ p{
 	padding-left: 20px;
 
 	display: grid;
-	grid-template-columns: 131px 119px 94px;
+	grid-template-columns: 119px 94px;
 	grid-gap: 20px;
 }
-
-
-#greenRoundedButton {
-	background-color:#77b55a;
-	border-radius:3px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family: sans-serif;
-	font-size:80%;
-	font-weight:bold;
-	padding:8px 19px;
-	text-decoration:none;
-	width: 93px;
-	height: 16px;
-}
-#greenRoundedButton:hover {
-	background-color:#639e47;
-}
-#greenRoundedButton:active {
-	position: relative;
-	top: 1px;
-}
-
 
 
 #githubButtonWrapper{
@@ -118,6 +94,8 @@ p{
 #githubButtonWrapper:active {
 	margin-top: 1px;
 }
+
+
 
 #githubButton {
 	background-color: #000000;
@@ -160,9 +138,7 @@ p{
 	margin-top: 1px;
 }
 
-#paypalButton:hover {
-	background-color: #ffba1a;
-}
+
 
 #paypalButton {
 	background-color: #FFC339;
@@ -179,4 +155,8 @@ p{
 	padding-right: 15px;
 	text-decoration: none;
 	position: absolute;
+}
+
+#paypalButton:hover {
+	background-color: #ffba1a;
 }
