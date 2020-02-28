@@ -12,6 +12,7 @@
 
   "web_accessible_resources": [
     "popup/checkBoxes.js",
+    "popup/buttons.js",
     "popup/style.css",
     "popup/menu.html"
   ],
