@@ -12,6 +12,7 @@ html, body {
 	margin-bottom: 0px;
 }
 
+
 p{
 	font-family: sans-serif;
 	font-size: 75%;
@@ -54,8 +55,8 @@ p{
 }
 
 .menu .option{
-	padding-top: 0.1%;
-	padding-bottom: 0.2%;
+	padding-top: 0.7%;
+	padding-bottom: 0%;
 }
 
 .menu label{
@@ -75,7 +76,6 @@ p{
 	grid-template-columns: 119px 94px;
 	grid-gap: 20px;
 }
-
 
 #githubButtonWrapper{
 	height: 32px;
