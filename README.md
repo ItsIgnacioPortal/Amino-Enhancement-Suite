@@ -1,16 +1,15 @@
 # Amino-Enhancement-Suite
 Tired of that clustered experience that amino gives you when reading blogs on PC? Well, suffer no more.
 
-**With AHS you can:**
+[Click aqui para la version en Español](/README_ESP.md)
 
-<ul>
-	<li>Hide the amino banner</li>
-	<li>Hide the animated comments</li>
-	<li>Hide the annoying fog on the community list sidebar</li>
-	<li>Acommodate the navigation buttons</li>
-</ul>
+Amino Enhancement Suite is a set of tools to improve your experience while using the AminoApps website (aminoapps.com). It includes the following features:
 
-Want to see an element again? Just click on the addon's button to configure it to your liking!
+- Hide the amino Banner
+- Hide annoying community list blur
+- Hide animated chat
+- Re-arrange some web-elements for a better experience
+- Choose what to hide and what not to hide
 
 ## License
 See [LICENSE](/LICENSE)
