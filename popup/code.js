@@ -1,8 +1,6 @@
 //Retrieve values from storage
 var AHSStorage = {};
 
-console.log("Checkboxes.js loaded");
-
 window.onload = async function createListeners(){
 	try{
 		//Get the checkboxes
