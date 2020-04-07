@@ -1,7 +1,7 @@
 # Amino-Enhancement-Suite
 An Enhancement suite for the AminoApps website
 
-<h2>Click aqui para la version en Español</h2>
+<h2>[Click aqui para la version en Español](/README_ESP.md)</h2>
 
 Amino Enhancement Suite is a set of tools to improve your experience while using the AminoApps website (aminoapps.com). It includes the following features:
 
