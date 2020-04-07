@@ -1,8 +1,9 @@
 //Retrieve values from storage
 var AHSStorage = {};
 
-window.onload = async function createListeners(){
+console.log("Checkboxes.js loaded");
 
+window.onload = async function createListeners(){
 	try{
 		//Get the checkboxes
 		var bannerCheckbox = await document.getElementById("sBanner");
@@ -11,6 +12,8 @@ window.onload = async function createListeners(){
 		
 		//DEBUGGING: browser.storage.local.get().then(function(item){console.log(item);});
 		await browser.storage.local.get().then(function(item){AHSStorage = item;});
+
+
 		if(AHSStorage.bannerCheckboxChecked){
 			bannerCheckbox.checked = true;
 		}  //else it will just remain unchecked
@@ -27,6 +30,27 @@ window.onload = async function createListeners(){
 		bannerCheckbox.addEventListener("click", validateBanner);
 		CLBCheckbox.addEventListener("click", validateCommunityListBlur);
 		liveCommentsCheckbox.addEventListener("click", validateLiveComments);
+
+
+		//==================================================================
+		//BUTTONS FUNCTIONALITY CODE AHEAD
+		//Get the wrappers
+		var githubButton = await document.getElementById("githubButtonWrapper");
+		var donateButton = await document.getElementById("donateButtonWrapper");
+
+		//Add an event listener onClick
+		githubButton.addEventListener("click", (function(tab) {
+			browser.tabs.create({
+				url: "https://github.com/PinkDev1/Amino-Enhancement-Suite"
+			});
+		}));
+
+		//Add an event listener onClick
+		donateButton.addEventListener("click", (function(tab) {
+			//Little popup with PinkDev1's CVU
+			alert("Thanks for supporting the project!\nPlease donate to the following CVU:\"0000007900204428177674\"");
+		}));
+
 
 	} catch(e){
 
