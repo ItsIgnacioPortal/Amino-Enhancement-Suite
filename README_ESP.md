@@ -10,3 +10,7 @@ La Suite de Mejoras de Amino es un set de herramientas que sirven para mejorar t
 - Ocultar el chat animado
 - Re-acomodar algunos elementos web para una mejor experiencia
 - Configurar que cosas ocultar y que no
+
+
+## Licencia
+Ver [LICENCIA](/LICENSE)
