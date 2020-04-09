@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Amino Enhancement Suite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Enhancement suite for the AminoApps website",
   "homepage_url": "https://github.com/PinkDev1/Amino-Enhancement-Suite",
 
@@ -11,8 +11,7 @@
   },  
 
   "web_accessible_resources": [
-    "popup/checkBoxes.js",
-    "popup/buttons.js",
+    "popup/code.js",
     "popup/style.css",
     "popup/menu.html"
   ],
