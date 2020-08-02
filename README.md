@@ -1,4 +1,6 @@
 # Amino-Enhancement-Suite
+![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2FPinkDev1%2FAmino-Enhancement-Suite)
+
 Tired of that clustered experience that amino gives you when reading blogs on PC? Well, suffer no more.
 
 [Click aqui para la version en Español](/README_ESP.md)
